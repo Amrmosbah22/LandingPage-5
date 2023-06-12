@@ -272,16 +272,119 @@ ul{
     justify-content: center;
     gap: 70px;
 }
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .features .container{
+        display: block;
+    }
+}
 .features .image{
-    width: 50%;
+    width: 70%;
+}
+@media (max-width:767px){
+    .features .image{
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .features .image{
+        width: 60%;
+    }
 }
 .features .image img{
     max-width: 100%;
 }
-.features .text > p{
+.features .main-text > p{
     color: var(--main-color);
     font-size: 50px;
     font-weight: 700;
+    margin-bottom: 30px;
 }
-.features .text .box{}
+@media (max-width:767px) {
+    .features .main-text > p{
+        font-size: 35px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .features .main-text > p{
+        font-size: 35px;
+    }
+}
+.features .main-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.features .main-text .box{
+    margin: 20px 0;
+}
+.features .box{
+    display: flex;
+}
+.features .box .text h2{
+    font-size: 25px;
+    font-weight: 600;
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .features .box .text h2{
+        font-size: 19px;
+    }
+}
+.features .box .icons i{
+    color: #fff;
+    background-color: #a60dcf;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 15px;
+}
+.features .box .text p{
+    color: #707b8e;
+    font-size: 19px;
+    line-height: 1.5;
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .features .box .text p{
+        font-size: 15px;
+    }
+}
 /* End Features */
+/* Start Helps */
+.helps{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.helps .main-text{
+    text-align: center;
+    color: var(--main-color);
+    font-size: 30px;
+}
+.helps .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.helps .box{
+    margin: 40px 0;
+    padding: 70px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+.helps .box .icons{
+    padding: 20px 0;
+    position: relative;
+}
+.helps .box .icons i{
+    color: #fff;
+    background-color: var(--main-background);
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+.helps .box .icons img{
+    width: 20%;
+    position: absolute;
+    top: -30px;
+    right: 25%;
+}
+/* End Helps */

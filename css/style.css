@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+:root{
+    --main-color: #2b044d;  
+    --main-color-alt: #f9218d;  
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --main-background: #a60dcf;
+    --section-background: #f4feff;
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px) {
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+}
+/* Start Header */
+.header{
+    background-color: var(--section-background);
+    position: relative;
+}
+.header .navbar{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+@media (max-width:767px){
+    .header .navbar{
+        width: 100%;
+    }
+}
+.header .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+@media (max-width:767px){
+    .header .logo{
+        width: 100%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .header .logo{
+        width: 100%;
+    }
+}
+.header .text{
+    display: flex;
+}
+.header .text > li > a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    color: #450b78;
+    padding: 0 20px;
+    overflow: hidden;
+}
+@media (max-width:767px){
+    .header .text > li > a{
+        padding: 10px;
+    }
+}
+.header .text > li > a::before{
+    content: "";
+    position: absolute;
+    background-color: var(--main-background);
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: -100%;
+    transition: var(--main-transition);
+}
+.header .text > li > a:hover::before{
+    left: 0;
+}
+.header .drop{
+    overflow: hidden;
+    position: absolute;
+    right: 20;
+    padding: 15px 0 ;
+    top: calc(100% + 20px);
+    background-color: #fff;
+    box-shadow: 0px 1px 8px #999;
+    border-radius: 5px;
+    width: 15%;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: top var(--main-transition), opacity var(--main-transition);
+}
+@media (max-width:767px) {
+    .header .drop{
+        width: 30%;
+    }
+}
+.header .drop .links{
+    min-width: 200px;
+}
+.header .drop .links li{
+    position: relative;
+}
+.header .drop .links li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--main-transition);
+    z-index: -1;
+}
+.header .text > li:hover .drop{
+    opacity: 1;
+    visibility: visible;
+    z-index: 3;
+    top: 100%;
+}
+.header .drop .links li a{
+    display: block;
+    color: #450b78;
+    padding: 10px 20px;
+    transition: var(--main-transition);
+}
+.header .drop .links li a:hover{
+    transform: translate(5px);
+}
+.header .drop .links li a::before{
+    content: "";
+    position: absolute;
+    background-color: #450b78;
+    height: 3px;
+    width: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -23px;
+    transition: var(--main-transition);
+}
+.header .drop .links li a:hover::before{
+    left: -9px;
+}
+/* End Header */
+/* Start Home */
+.home{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+    
+}
+.home .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+}
+.home .text p{
+    color: #2b044d;
+}
+.home .text h1{
+    color: #2b044d;
+    font-size: 60px;
+}
+@media (max-width:767px){
+    .home .text h1{
+        font-size: 40px;
+    }
+}
+.home .text article{
+    color: #707b8e;
+    font-size: 18px;
+    line-height: 2;
+}
+@media (max-width:767px){
+    .home .text article{
+        font-size: 15px;
+    }
+}
+.home .text .link button{
+    background-color: #f9218d;
+    padding: 15px 40px;
+    border: 0;
+    color: #fff;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.home .text .link button::after{
+    content: "";
+    background-color: #a50dcf71 ;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+    z-index: -1;
+}
+.home .text .link button:hover::after{
+    width: 100%;
+}
+.home .text .link i{
+    margin-left: 20px;
+    color: #fff;
+    background-color: #d852e8;
+    padding: 18px 22px;
+    border-radius: 50%;
+}
+@media (max-width:767px){
+    .home .image{
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .home .image{
+        display: none;
+    }
+}
+/* End Home */
+/* Start Features */
+.features{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.features .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+.features .image{
+    width: 50%;
+}
+.features .image img{
+    max-width: 100%;
+}
+.features .text > p{
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+.features .text .box{}
+/* End Features */

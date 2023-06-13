@@ -5,6 +5,7 @@
     --main-transition: 0.3s;
     --main-padding-top: 100px;
     --main-padding-bottom: 100px;
+    --main-margin-top: 22em;
     --main-background: #a60dcf;
     --section-background: #f4feff;
 }
@@ -429,3 +430,188 @@ ul{
     background-color: #835ef8;
 }
 /* End Helps */
+/* Start Apps */
+.apps{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    overflow: hidden;
+}
+.apps .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 150px;
+}
+.apps .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.apps .text h2{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 40px;
+    padding: 20px 0;
+}
+.apps .text p{
+    color: #707b8e;
+    font-size: 17px;
+}
+.apps .image{
+    display: flex;
+}
+@media (max-width:767px) {
+    .apps .image{
+        display: block;
+    }
+}
+.apps .image img{
+    max-width: 13vw;
+}
+@media (max-width:767px) {
+    .apps .image img{
+        max-width: 13vh;
+    }
+    .apps .image img:last-child{
+        display: none;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .apps .image img{
+        margin: auto;
+        max-width: 20vh;
+    }
+    .apps .image img:last-child{
+        display: none;
+    }
+}
+/* End Apps */
+/* Start Pricing */
+.pricing{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background:-webkit-linear-gradient(0deg,#f9218dde 0%,#6c19f6 100%), url(../img/best_pricingbg.jpg.webp);
+    height: 85vh;
+}
+.pricing .main-text{
+    text-align: center;
+    color: #fff;
+}
+.pricing .main-text h2{
+    font-weight: bold;
+    font-size: 50px;
+}
+@media (max-width:767px) {
+    .pricing .main-text h2{
+        font-size: 30px;
+    }
+}
+.pricing .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.pricing .box{
+    margin-top: 70px;
+    padding: 70px 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #57667e;
+}
+@media (max-width:767px) {
+    .pricing .box:last-child{
+        display: none;
+    }
+    .pricing .child{
+        visibility: hidden;
+        background-color: #c465bc91;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .pricing .box:last-child{
+        display: none;
+    }
+}
+.pricing .box h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+.pricing .box h3{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 2;
+}
+.pricing .box span{
+    font-size: 25px;
+}
+.pricing .box p{
+    width: 70%;
+    margin: 50px auto;
+    font-size: 18px;
+}
+.pricing .box a{
+    line-height: 8;
+    color: #fff;
+    background-color: #712fda;
+    border-radius: 5px;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    transition: var(--main-transition);
+}
+.pricing .box a:hover{
+    background-color: #450b78;
+}
+/* End Pricing */
+/* Start Our Customers */
+.our-customers{
+    margin-top: var(--main-margin-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .our-customers{
+        margin-top: 0;
+        padding-top: var(--main-padding-top);
+    }
+}
+.our-customers .main-text{
+    text-align: center;
+}
+.our-customers .main-text h2{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 45px;
+}
+@media (max-width:767px) {
+    .our-customers{
+        margin-top: 0;
+        padding-top: var(--main-padding-top);
+    }
+    .our-customers .main-text h2{
+        font-size: 35px;
+    }
+}
+.our-customers .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.our-customers .box{
+    margin: 60px 0 ;
+}
+.our-customers .opacity{
+    opacity: .5;
+}
+.our-customers .image img{
+    width: 40px;
+}
+.our-customers .text h2{
+    color: #712fda;
+    padding: 15px 0;
+    font-size: 20px;
+}
+.our-customers .text p{
+    color: #707b8e;
+}
+/* End Our Customers */
+/* Start Our App */
+/* End Our App  */

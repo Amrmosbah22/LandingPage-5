@@ -200,7 +200,8 @@ ul{
 }
 .home .text h1{
     color: #2b044d;
-    font-size: 60px;
+    font-size: 55px;
+    font-weight: 700;
 }
 @media (max-width:767px){
     .home .text h1{
@@ -321,7 +322,7 @@ ul{
     display: flex;
 }
 .features .box .text h2{
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 600;
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -353,38 +354,78 @@ ul{
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     background-color: var(--section-background);
-}
-.helps .main-text{
     text-align: center;
+}
+.helps .main-text h2{
+    font-size: 45px;
     color: var(--main-color);
-    font-size: 30px;
+    font-weight: bold;
+}
+@media (max-width:767px) {
+    .helps .main-text h2{
+        font-size: 33px;
+    }
 }
 .helps .container{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
-.helps .box{
+.helps .card{
     margin: 40px 0;
-    padding: 70px 20px;
-    background-color: #fff;
-    text-align: center;
 }
-.helps .box .icons{
-    padding: 20px 0;
-    position: relative;
-}
-.helps .box .icons i{
-    color: #fff;
-    background-color: var(--main-background);
-    padding: 20px;
-    font-size: 30px;
-    border-radius: 50%;
-}
-.helps .box .icons img{
+.helps .card .icon{
     width: 20%;
+    padding: 50px 0;
+    margin-left: 50%;
+    transition: var(--main-transition);
+}
+.helps .text{
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+.helps .text h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+.helps .text h3:hover{
+    color: #835ef8;
+}
+.helps .text p{
+    color: #707b8e;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 30px 0;
+}
+.helps .icon i{
+    font-size: 40px;
     position: absolute;
-    top: -30px;
-    right: 25%;
+    background-color: #a60dcf;
+    color: #fff;
+    height: 100px;
+    width: 100px;
+    right: 40%;
+    top: 18%;
+    padding-top: 30px;
+    border-radius: 50px;
+    transition: all .5s;
+}
+.helps .box{
+    border: 1px solid transparent;
+    transition: var(--main-transition);
+}
+.helps .icon .test{
+    background-color: #835ef8;
+}
+.helps .card:hover{
+    border: 1px solid #2b044d;
+}
+.helps .card:hover .icon{
+    margin-left: 51%;
+}
+.helps .card:hover i {
+    background-color: #835ef8;
 }
 /* End Helps */

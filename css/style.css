@@ -614,4 +614,234 @@ ul{
 }
 /* End Our Customers */
 /* Start Our App */
+.our-app{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background:-webkit-linear-gradient(0deg,#6c19f6 0%,#f9218d 100%);
+    position: relative;
+}
+.our-app .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+@media (max-width:767px) {
+    .our-app .container{
+        display: block;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .our-app .container{
+        display: block;
+    }
+}
+.our-app .text{
+    color: #fff;
+}
+.our-app .text h2{
+    font-weight: bold;
+    font-size: 45px;
+}
+.our-app .text p{
+    padding: 20px 0;
+}
+.our-app .main-image img{
+    width: 30em;
+}
+@media (max-width:767px) {
+    .our-app .main-image img{
+        width: 100%;
+        padding-top: 40px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .our-app .main-image img{
+        width: 100%;
+        padding-top: 40px;
+    }
+}
+.our-app > img{
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+}
+@media (max-width:767px) {
+    .our-app > img{
+        display: none;
+    }
+}
 /* End Our App  */
+/* Start Contact */
+.contact{
+    border-bottom: 2px solid #f9218d;
+    overflow: hidden;
+    position: relative;
+}
+.contact .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    .contact{
+        padding: 70px 0;
+    }
+    .contact .container{
+        display: block;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .contact{
+        padding: 70px 0;
+    }
+    .contact .container{
+        display: block;
+    }
+}
+.contact .text{
+    position: relative;
+}
+@media (max-width:767px) {
+    .contact .text{
+        text-align: center;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .contact .text{
+        text-align: center;
+    }
+}
+.contact .text h2{
+    font-weight: bold;
+    font-size: 45px;
+}
+@media (max-width:767px) {
+    .contact .text h2{
+        font-size: 30px;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .contact .text h2{
+        font-size: 30px;
+    }
+}
+.contact .text img{
+    position: absolute;
+    left: -90%;
+    animation: right-move 5s linear infinite;
+}
+@media (max-width:767px) {
+    .contact .text img{
+        position: absolute;
+        display: none;
+    }
+}
+.contact .link{
+    position: relative;
+}
+.contact .link a{
+    position: relative;
+    position: absolute;
+    right: 25%;
+    bottom: 40%;
+    color: #fff;
+    background-color: #a60dcf;
+    border-radius: 100px;
+    padding: 15px 25px;
+    font-size: 20px;
+    overflow: hidden;
+    z-index: 1;
+}
+@media (max-width:767px) {
+    .contact .link a{
+        right: 28%;
+    }
+}
+.contact .link a::after{
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: var(--main-transition);
+    z-index: -1;
+}
+.contact .link a:hover::after{
+    width: 100%;
+    background-color: #f921508e;
+}
+/* End Contact */
+/* Start Footer */
+.footer{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+}
+.footer .box .image img{
+    padding-bottom: 20px;
+}
+.footer .box p{
+    color: #707b8e;
+}
+.footer .box h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+}
+.footer .box ul > a{
+    line-height: 2;
+    color: #868c98;
+    font-size: 18px;
+}
+.footer .box li{
+    transition: var(--main-transition);
+}
+.footer .box li:hover{
+    color: #8f1bdc;
+    transform: translateX(10px);
+}
+.footer .box form{
+    position: relative;
+}
+.footer .box input{
+    margin: 20px 0;
+    border: 0;
+    font-size: 18px;
+    padding: 10px;
+}
+.footer button{
+    background-color: #450b78;
+    border: 0;
+    padding: 10px 15px;
+    position: absolute;
+    bottom: 25%;
+    right: 20px;
+}
+.txt{
+    padding-bottom: var(--main-padding-bottom);
+}
+.txt h4{
+    font-size: 18px;
+    color: #888;
+}
+.txt span a,.txt span i{
+    color: #f9218d;
+    font-weight: 400;
+}
+.txt span a:hover{
+    color: #8f1bdc;
+}
+/* End Footer */
+/* Start Animation */
+@keyframes right-move{
+    100%{
+        transform: rotate(100deg); 
+    }
+}
+/* End Animation */
